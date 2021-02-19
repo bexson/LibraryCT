@@ -1,4 +1,4 @@
-package com.libraryAutomation.runners;
+package com.libraryAutomation.runners.Bektemir;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
