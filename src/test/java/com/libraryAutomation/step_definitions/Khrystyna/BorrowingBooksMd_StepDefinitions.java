@@ -1,5 +1,7 @@
 package com.libraryAutomation.step_definitions.Khrystyna;
 
+import com.libraryAutomation.utilities.ConfigurationReader;
+import com.libraryAutomation.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -9,6 +11,8 @@ public class BorrowingBooksMd_StepDefinitions {
     @Given("User is on the homepage")
     public void user_is_on_the_homepage() {
 
+        String url = ConfigurationReader.getProperty("logIn_Url");
+        Driver.getDriver().get(url);
     }
 
 
