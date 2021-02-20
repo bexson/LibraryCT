@@ -8,9 +8,9 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         plugin = "html:target/cucumber-report.html",
         features = "src/test/resources/features",
-        glue = "com/cybertek/step_definitions",
+        glue = "com/libraryAutomation/step_definitions",
         dryRun = false, // if dryRun is true , it will not run your step_definitions
-        tags = ""
+        tags = "@user_story_8"
 )
 
 
