@@ -1,4 +1,4 @@
-package com.libraryAutomation.step_definitions.Khrystyna;
+package com.libraryAutomation.step_definitions;
 
 import com.libraryAutomation.pages.BasePage;
 import com.libraryAutomation.pages.BorrowingBooksPage;
