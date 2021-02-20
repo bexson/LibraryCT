@@ -8,6 +8,7 @@ import com.libraryAutomation.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.cucumber.messages.Messages;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -36,7 +37,10 @@ public class BorrowingBooksMd_StepDefinitions {
     }
 
     @Then("User should see the following column names:")
-    public void user_should_see_the_following_column_names() {
+    public void user_should_see_the_following_column_names(List<String> expectedList) {
+
+        expectedList.addAll(Arrays.asList("Action", "Book Name", "Borrowed Data", "Planned Return Date", "Return Data", "Is Returned?"));
+
         //creating empty List<String> to store located WebTable info
         List<String> actualWebElementsList = new ArrayList<>();
 
@@ -46,8 +50,10 @@ public class BorrowingBooksMd_StepDefinitions {
             actualWebElementsList.addAll(Arrays.asList(eachElement.getText()));
         }
 
+        System.out.println(actualWebElementsList);
 
     }
+
 
 
 }
