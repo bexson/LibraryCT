@@ -1,4 +1,4 @@
-package com.libraryAutomation.runners.Bektemir;
+package com.libraryAutomation.runners;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -13,6 +13,6 @@ import org.junit.runner.RunWith;
         tags = ""
 )
 
-
 public class CukesRunner {
+
 }
