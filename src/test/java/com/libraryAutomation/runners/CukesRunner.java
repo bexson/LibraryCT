@@ -1,4 +1,4 @@
-package com.libraryAutomation.runners.Bektemir;
+package com.libraryAutomation.runners;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -10,9 +10,9 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/libraryAutomation/step_definitions",
         dryRun = false, // if dryRun is true , it will not run your step_definitions
-        tags = "@user_story_8"
+        tags = "@librarianAddUser"
 )
 
-
 public class CukesRunner {
+
 }
