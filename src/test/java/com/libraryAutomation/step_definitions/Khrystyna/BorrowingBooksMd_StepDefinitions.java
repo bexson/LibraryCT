@@ -1,14 +1,21 @@
 package com.libraryAutomation.step_definitions.Khrystyna;
 
+import com.libraryAutomation.utilities.ConfigurationReader;
+import com.libraryAutomation.utilities.Driver;
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 
 public class BorrowingBooksMd_StepDefinitions {
 
     @Given("User is on the homepage")
     public void user_is_on_the_homepage() {
+        String expectedUrl = ConfigurationReader.getProperty("homePage_Url");
+        String currentUrl = Driver.getDriver().getCurrentUrl();
 
+        Assert.assertTrue(expectedUrl.equals(currentUrl));
     }
 
 
@@ -17,7 +24,7 @@ public class BorrowingBooksMd_StepDefinitions {
 
     }
     @Then("User should see the following column names:")
-    public void user_should_see_the_following_column_names(io.cucumber.datatable.DataTable dataTable) {
+    public void user_should_see_the_following_column_names() {
 
     }
 
