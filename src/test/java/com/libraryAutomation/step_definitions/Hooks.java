@@ -1,6 +1,5 @@
 package com.libraryAutomation.step_definitions;
 
-import com.libraryAutomation.pages.BasePage;
 import com.libraryAutomation.pages.LoginPage;
 import com.libraryAutomation.utilities.BrowserUtils;
 import com.libraryAutomation.utilities.ConfigurationReader;
@@ -13,7 +12,6 @@ import org.openqa.selenium.TakesScreenshot;
 
 public class Hooks {
     LoginPage loginPage = new LoginPage();
-    BasePage basePage = new BasePage();
     String url = ConfigurationReader.getProperty("logIn_Url");
 
     //THIS BEFORE WITH VALUE @records is for USER STORY 5 ( RECORDS DROPDOWN FEATURE )
@@ -32,7 +30,7 @@ public class Hooks {
         }
 
         BrowserUtils.sleep(5);
-        // Driver.closeDriver();
+//         Driver.closeDriver();
     }
 
 }
