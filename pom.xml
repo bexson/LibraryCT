@@ -15,6 +15,7 @@
 
     <build>
         <plugins>
+            <!-- maven compiler plugin : for forcing maven compiler level to java 8 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -24,6 +25,12 @@
                     <target>8</target>
                 </configuration>
             </plugin>
+
+            <!--      Maven surefire plugin      -->
+            <!-- This plugin allows us to run our CukesRunner class using maven lifecycles.-->
+            <!-- if testFailureIgnore is true , it ignores any failure that you will get, and will continue testing ,
+            if false it will stop executing rest of the test , if you have failure
+            CukesRunner is java regex to run all CukesRunners in your project-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -38,6 +45,11 @@
                     </includes>
                 </configuration>
             </plugin>
+
+            <!--    CUCUMBER-MAVEN-REPORT   -->
+            <!--This is a plugin that allows us to generate a 3rd party reporting. -->
+            <!-- cucumber*.json after running the code will convert the cucumber.json file to something that human can understand better ,
+             will be better displayed -->
             <plugin>
                 <groupId>net.masterthought</groupId>
                 <artifactId>maven-cucumber-reporting</artifactId>
