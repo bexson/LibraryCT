@@ -8,7 +8,6 @@ import com.libraryAutomation.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.cucumber.messages.Messages;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -17,7 +16,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class BorrowingBooksMd_StepDefinitions {
+public class BorrowingBookMdStepDefinitions {
 
     BasePage basePage = new BasePage();
     LoginPage loginPage = new LoginPage();
@@ -28,32 +27,31 @@ public class BorrowingBooksMd_StepDefinitions {
         //login
         Driver.getDriver().get(ConfigurationReader.getProperty("logIn_Url"));
         loginPage.loginAsStudent();
-    }
+        Thread.sleep(3000);
 
+    }
 
     @When("User click Borrowing Books module")
     public void user_click_borrowing_books_module() {
         basePage.BorrowingBooksModule.click();
-    }
 
+    }
     @Then("User should see the following column names:")
     public void user_should_see_the_following_column_names(List<String> expectedList) {
 
-        expectedList.addAll(Arrays.asList("Action", "Book Name", "Borrowed Data", "Planned Return Date", "Return Data", "Is Returned?"));
-
         //creating empty List<String> to store located WebTable info
-        List<String> actualWebElementsList = new ArrayList<>();
+      List<String> actualList = new ArrayList<>();
 
         //locating 1st row of WebTable and storing it in List<WebElement>
         List<WebElement> rows = Driver.getDriver().findElements(By.xpath("//table[@id='borrowed_list']//th"));
         for(WebElement eachElement : rows){
-            actualWebElementsList.addAll(Arrays.asList(eachElement.getText()));
+            actualList.add(eachElement.getText());
         }
 
-        System.out.println(actualWebElementsList);
+        Assert.assertTrue(expectedList.equals(actualList));
+
 
     }
-
 
 
 }
