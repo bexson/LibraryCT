@@ -11,5 +11,7 @@ import org.junit.runner.RunWith;
 )
 
 public class FailedTestRunner {
-
+/*THIS CLASS WILL ONLY RUN FAILED TESTS
+- This helps us to save time on running our tests.
+- Instead of running the whole test suite, we have the option to run only failed tests.*/
 }
