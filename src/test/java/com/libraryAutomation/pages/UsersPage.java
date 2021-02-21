@@ -11,8 +11,10 @@ public class UsersPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    //as librarian
+    //WHEN YOU LOGGED IN AS LIBRARIAN , YOU SHOULD SEE THESE ELEMENTS ON USERS PAGE BELOW
     @FindBy(id = "user_status")
     public WebElement statusDropDownButton;
 
+    @FindBy(name = "tbl_users_length")
+    public WebElement recordsDropDown;
 }
