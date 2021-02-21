@@ -10,7 +10,6 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
@@ -29,7 +28,7 @@ public class RecordsDropDown_StepDefinitions {
 
     @When("Librarian is on the Users page")
     public void librarian_is_on_the_users_page() {
-        basePage.usersModule.click();
+        basePage.usersLink.click();
     }
     @Then("User should see {string} by default in the records dropdown")
     public void user_should_see_by_default_in_the_records_dropdown(String expected) {
