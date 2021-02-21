@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class UsersPage {
     public UsersPage(){
-        PageFactory.initElements(Driver.getDriver() , this);
+        PageFactory.initElements( Driver.getDriver() , this );
     }
 
     @FindBy(name = "tbl_users_length" )

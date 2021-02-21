@@ -1,25 +1,13 @@
 package com.libraryAutomation.step_definitions;
 
-import com.libraryAutomation.pages.LoginPage;
 import com.libraryAutomation.utilities.BrowserUtils;
-import com.libraryAutomation.utilities.ConfigurationReader;
 import com.libraryAutomation.utilities.Driver;
 import io.cucumber.java.After;
-import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
 public class Hooks {
-    LoginPage loginPage = new LoginPage();
-    String url = ConfigurationReader.getProperty("logIn_Url");
-
-    //THIS BEFORE WITH VALUE @records is for USER STORY 5 ( RECORDS DROPDOWN FEATURE )
-    @Before(value = "@records")
-    public void loginAsLibrarian() {
-        Driver.getDriver().get(url);
-        loginPage.loginAsLibrarian();
-    }
 
     @After(order = 2)
     public void tearDownScenario2(Scenario scenario) {
@@ -30,7 +18,7 @@ public class Hooks {
         }
 
         BrowserUtils.sleep(5);
-//         Driver.closeDriver();
+         Driver.closeDriver();
     }
 
 }
