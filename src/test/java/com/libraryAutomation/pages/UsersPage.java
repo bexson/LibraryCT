@@ -6,11 +6,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class UsersPage {
-    public UsersPage(){
-        PageFactory.initElements( Driver.getDriver() , this );
+
+    public UsersPage() {
+        PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(name = "tbl_users_length" )
-    public WebElement recordsDropDown;
-
+    //as librarian
+    @FindBy(id = "user_status")
+    public WebElement  recordsDropDown;
 }
