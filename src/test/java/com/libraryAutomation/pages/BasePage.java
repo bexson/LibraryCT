@@ -14,4 +14,8 @@ public class BasePage {
     @FindBy(xpath = "//div[@id='navbarCollapse']//li[2]//a")
     public WebElement BorrowingBooksModule;
 
+    //as librarian
+    @FindBy(css = "a[href='#users']")
+    public WebElement usersLink;
+
 }

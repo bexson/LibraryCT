@@ -29,7 +29,7 @@ public class LoginPage {
 
     public void loginAsLibrarian(){
         emailField.sendKeys(ConfigurationReader.getProperty("userEmail_4"));
-        passwordField.sendKeys("userPassword_4");
+        passwordField.sendKeys(ConfigurationReader.getProperty("userPassword_4"));
         loginButton.click();
     }
 
