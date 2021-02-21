@@ -3,6 +3,7 @@ package com.libraryAutomation.step_definitions;
 import com.libraryAutomation.pages.BasePage;
 import com.libraryAutomation.pages.LoginPage;
 import com.libraryAutomation.pages.UsersPage;
+import com.libraryAutomation.utilities.BrowserUtils;
 import com.libraryAutomation.utilities.ConfigurationReader;
 import com.libraryAutomation.utilities.Driver;
 import io.cucumber.java.en.Given;
@@ -11,6 +12,8 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
+
+import java.util.List;
 
 public class RecordsDropDown_StepDefinitions {
     LoginPage loginPage = new LoginPage();
@@ -37,6 +40,22 @@ public class RecordsDropDown_StepDefinitions {
         String actual = recordsDropdown.getFirstSelectedOption().getText();
 
         Assert.assertEquals(actual , expected);
+
+    }
+
+    @When("Librarian clicks records dropdown")
+    public void librarian_clicks_records_dropdown() {
+    }
+
+
+    @Then("User should see numbers below")
+    public void user_should_see_numbers_below(List<String> expectedOptions) {
+        UsersPage usersPage = new UsersPage();
+        Select recordsDropDown = new Select(usersPage.recordsDropDown);
+
+        List<String> actualOptions = BrowserUtils.getElementText(recordsDropDown.getOptions());
+
+        Assert.assertEquals(actualOptions , expectedOptions);
 
     }
 
