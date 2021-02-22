@@ -1,8 +1,10 @@
 Feature: As a librarian, I should be able to add users from users page.
 
-
-  Scenario Template: Add users with all valid info
+  Background: User is on Users Module
     Given Librarian is on user management page
+
+  @US4
+  Scenario Template: Add users with all valid info
     When Librarian clicks Add User button
     And Librarian enters "<fullname>" in fullname
     * Librarian enters "<password>" in password box
@@ -16,18 +18,48 @@ Feature: As a librarian, I should be able to add users from users page.
     Then Librarian can see "<fullname>" in user list
 
     Examples:
-      | fullname | password    | email           | usergroup | status   | startdate  | enddate    | adress   |
-      | fatih    | sweetpotato | adsad@gmail.com | librarian | active   | 2015-06-20 | 2021-03-20 | anywhere |
-      | husnu    | pirasa      | gregd@gmail.com | librarian | inactive | 2021-02-20 | 2021-03-20 | anywhere |
-      | hasan    | maydanoz    | cxvxc@gmail.com | students  | active   | 2021-02-20 | 2021-03-20 | anywhere |
-      | ali      | brokoli     | qewqw@gmail.com | students  | inactive | 2021-02-20 | 2021-03-20 | anywhere |
+      | fullname | password    | email           | usergroup | status | startdate  | enddate    | adress   |
+      | fatih    | sweetpotato | adas@gmail.com  | librarian | active | 2015-06-20 | 2021-03-20 | anywhere |
+      | husnu    | pirasa      | afas@gmail.com  | librarian | active | 2021-02-20 | 2021-03-20 | anywhere |
+      | hasan    | maydanoz    | agas@gmail.com  | students  | active | 2021-02-20 | 2021-03-20 | anywhere |
+      | ali      | brokoli     | afsad@gmail.com | students  | active | 2021-02-20 | 2021-03-20 | anywhere |
 
-    @US4
-    Scenario: Librarian is able to close the add user window with "close" button
-      Given Librarian is on user management page
-      When Librarian clicks Add User button
-      And Librarian clicks close button
-      Then Librarian sees Add User window is closed
+      #The bug is there is no way to create a user with inactive status but the option belongs to the form
+
+
+  Scenario: Librarian is able to close the add user window with "close" button
+    When Librarian clicks Add User button
+    And Librarian clicks close button
+    Then Librarian sees Add User window is closed
+
+
+  Scenario: Librarian is able to edit fullname
+    When Librarian clicks Edit User button
+    And Librarian changes fullname
+    And Librarian clicks save changes button
+    Then Librarian should see name changed
+
+
+  Scenario: Librarian is able to edit email
+    When Librarian clicks Edit User button
+    And Librarian changes email
+    And Librarian clicks save changes button
+    Then Librarian should see email changed
+
+
+  Scenario: Librarian is able to change user group
+    When Librarian clicks Edit User button
+    And Librarian changes user group
+    And Librarian clicks save changes button
+    Then Librarian should see user group changed
+
+
+  Scenario: Librarian is able to change user group
+    When Librarian clicks Edit User button
+    And Librarian changes status
+    And Librarian clicks save changes button
+    Then Librarian should see status changed
+
 
 
 
