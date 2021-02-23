@@ -27,6 +27,12 @@ public class LoginPage {
         loginButton.click();
     }
 
+    public void login(String username, String password){
+        emailField.sendKeys(username);
+        passwordField.sendKeys(password);
+        loginButton.click();
+    }
+
     public void loginAsLibrarian(){
         emailField.sendKeys(ConfigurationReader.getProperty("userEmail_4"));
         passwordField.sendKeys(ConfigurationReader.getProperty("userPassword_4"));
