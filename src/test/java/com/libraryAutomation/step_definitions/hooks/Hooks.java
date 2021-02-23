@@ -1,4 +1,4 @@
-package com.libraryAutomation.step_definitions;
+package com.libraryAutomation.step_definitions.hooks;
 
 import com.libraryAutomation.utilities.BrowserUtils;
 import com.libraryAutomation.utilities.Driver;
@@ -18,7 +18,7 @@ public class Hooks {
         }
 
         BrowserUtils.sleep(5);
-        // Driver.closeDriver();
+        Driver.closeDriver();
     }
 
 }
