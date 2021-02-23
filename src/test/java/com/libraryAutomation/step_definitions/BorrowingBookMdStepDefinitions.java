@@ -18,13 +18,13 @@ import java.util.List;
 
 public class BorrowingBookMdStepDefinitions {
 
-    BasePage basePage = new BasePage();
+
     LoginPage loginPage = new LoginPage();
-    BorrowingBooksPage borrowingBooksPage = new BorrowingBooksPage();
+
 
     @Given("User is on the homepage")
     public void user_is_on_the_homepage() throws InterruptedException {
-        //login
+
         Driver.getDriver().get(ConfigurationReader.getProperty("logIn_Url"));
         loginPage.loginAsStudent();
         Thread.sleep(3000);
@@ -33,7 +33,7 @@ public class BorrowingBookMdStepDefinitions {
 
     @When("User click Borrowing Books module")
     public void user_click_borrowing_books_module() {
-        basePage.BorrowingBooksModule.click();
+
 
     }
     @Then("User should see the following column names:")
