@@ -12,13 +12,15 @@ public class Hooks {
     @After(order = 2)
     public void tearDownScenario2(Scenario scenario) {
 
-        if(scenario.isFailed()) {
+        if (scenario.isFailed()) {
             byte[] screenShot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenShot, "image/png", scenario.getName());
         }
 
         BrowserUtils.sleep(5);
         Driver.closeDriver();
+
+
     }
 
 }
