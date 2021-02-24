@@ -39,7 +39,10 @@ public class LibrarianAddUser_Step_Definitions {
 
 
     @And("Librarian enters {string} in email box")
-    public void librarian_enters_in_email_box(String string) { usersPage.inputEmail.sendKeys(string); }
+    public void librarian_enters_in_email_box(String string) {
+//        usersPage.inputEmail.sendKeys(string);
+        usersPage.addEmail();
+    }
 
 
     @And("Librarian chooses {string} for usergroup option")

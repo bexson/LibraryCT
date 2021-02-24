@@ -73,7 +73,28 @@ public class UsersPage extends BasePage{
         inputEmail.sendKeys(faker.internet().emailAddress());
     }
 
+    public void addStartDate(){
+
+    }
+
+    public void addEndDate(){
+
+    }
+
+    public void addAdress(){
+        inputAdress.sendKeys(faker.address().fullAddress());
+    }
+
     
+
+
+
+
+
+
+
+
+
 
 
     public void changeUserGroup(){
