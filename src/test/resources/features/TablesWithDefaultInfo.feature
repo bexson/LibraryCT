@@ -4,7 +4,7 @@ Feature: Tables with default info
   Scenario: Table columns names
 
     Given the user on the homepage
-    Then the user should see the following column names:
+    Then The user should see the following column names:
       | Actions     |
       | ISBN        |
       | Name        |

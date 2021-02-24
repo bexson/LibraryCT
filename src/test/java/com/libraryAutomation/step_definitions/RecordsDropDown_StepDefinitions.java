@@ -19,6 +19,7 @@ public class RecordsDropDown_StepDefinitions {
     String url = ConfigurationReader.getProperty("logIn_Url");
 
     BasePage basePage = new BasePage();
+//    UsersPage usersPage = new UsersPage();// If I'm using the same locator I gotta reinitialize it again
 
     @Given("Librarian is on the landing page")
     public void librarian_is_on_the_landing_page() {
