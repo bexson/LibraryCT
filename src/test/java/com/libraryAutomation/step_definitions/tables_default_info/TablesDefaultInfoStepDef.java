@@ -34,7 +34,7 @@ public class TablesDefaultInfoStepDef {
 
     }
 
-    @Then("the user should see the following column names:")
+    @Then("The user should see the following column names:")
     public void the_user_should_see_the_following_column_names(List<String> expectedValues) {
 
         List<String> actualValues = new ArrayList<>();
