@@ -1,8 +1,11 @@
 package com.libraryAutomation.step_definitions.hooks;
 
+import com.libraryAutomation.pages.LoginPage;
 import com.libraryAutomation.utilities.BrowserUtils;
+import com.libraryAutomation.utilities.ConfigurationReader;
 import com.libraryAutomation.utilities.Driver;
 import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -20,7 +23,5 @@ public class Hooks {
         BrowserUtils.sleep(5);
         Driver.closeDriver();
 
-
     }
-
 }
