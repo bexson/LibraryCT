@@ -28,7 +28,7 @@ public class CategoriesDropdown_StepDefinitions {
 
     }
 
-    @Then("Student should see all the list below")
+    @Then("Student should see all the List below")
     public void student_should_see_all_the_list_below(List<String> expectedList) {
 
     Select categoriesDD = new Select(landingPage.categoriesDD);
