@@ -1,16 +1,21 @@
 package com.libraryAutomation.pages;
 
-<<<<<<< HEAD
+import com.github.javafaker.Faker;
 import com.libraryAutomation.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
+import org.w3c.dom.html.HTMLInputElement;
 
 public class UsersPage {
+
+
 
     public UsersPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
+
 
     //WHEN YOU LOGGED IN AS LIBRARIAN , YOU SHOULD SEE THESE ELEMENTS ON USERS PAGE BELOW
     @FindBy(id = "user_status")
@@ -18,13 +23,13 @@ public class UsersPage {
 
     @FindBy(name = "tbl_users_length")
     public WebElement recordsDropDown;
-=======
-import com.github.javafaker.Faker;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.Select;
 
-public class UsersPage extends BasePage{
+    @FindBy(xpath = "(//a[@class='nav-link'])[2]")
+    public WebElement usersModule;
+
+
+
+
     Faker faker = new Faker();
 
 
@@ -103,6 +108,7 @@ public class UsersPage extends BasePage{
     public void addAdress(){
         inputAdress.sendKeys(faker.address().fullAddress());
     }
+    
 
     
 
@@ -148,9 +154,5 @@ public class UsersPage extends BasePage{
 //        return xpath;
 //    }
 //
-
-
-
-
->>>>>>> origin/librarian_add_user
+    
 }

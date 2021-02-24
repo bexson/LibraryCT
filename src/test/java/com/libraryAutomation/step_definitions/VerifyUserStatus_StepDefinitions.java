@@ -33,7 +33,7 @@ public class VerifyUserStatus_StepDefinitions {
     @When("the user clicks users module link")
     public void theUserClicksUsersModuleLink() throws InterruptedException {
 
-        basePage.usersLink.click();
+        basePage.usersModule.click();
         Thread.sleep(2000);
 
     }

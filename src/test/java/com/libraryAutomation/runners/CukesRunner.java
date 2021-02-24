@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/libraryAutomation/step_definitions",
         dryRun = false, // if dryRun is true , it will not run your step_definitions
-        tags = "@librarianAddUser"
+        tags = "@categoriesDD"
 )
 
 public class CukesRunner {

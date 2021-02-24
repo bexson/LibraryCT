@@ -28,7 +28,7 @@ public class RecordsDropDown_StepDefinitions {
 
     @When("Librarian is on the Users page")
     public void librarian_is_on_the_users_page() {
-        basePage.usersLink.click();
+        basePage.usersModule.click();
     }
     @Then("User should see {string} by default in the records dropdown")
     public void user_should_see_by_default_in_the_records_dropdown(String expected) {
