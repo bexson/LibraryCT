@@ -25,7 +25,7 @@ public class CategoriesDropdown_StepDefinitions {
     public void studentClicksCategoriesDropdown() throws InterruptedException {
         landingPage.categoriesDD.click();
         Thread.sleep(2000);
-//
+
     }
 
     @Then("Student should see all the list below")
