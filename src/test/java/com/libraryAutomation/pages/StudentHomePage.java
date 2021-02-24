@@ -9,11 +9,12 @@ import java.util.List;
 
 public class StudentHomePage {
 
+    public Iterable<? extends WebElement> tableHeaders;
+
     public StudentHomePage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy(xpath = "//th")
-   public List<WebElement> tableHeaders;
+
 
 }
