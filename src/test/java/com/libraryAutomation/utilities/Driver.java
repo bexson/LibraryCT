@@ -35,7 +35,7 @@ public class Driver {
                     break;
                 case "chrome_headless":
                     WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver(new ChromeOptions().setHeadless(false));
+                    driver = new ChromeDriver(new ChromeOptions().setHeadless(true));
                     driver.manage().window().maximize();
                     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
                     break;
