@@ -22,27 +22,27 @@ public class VerifyUserStatus_StepDefinitions {
     UsersPage usersPage = new UsersPage();
 
     @Given("the user \\(Librarian) on the homepage")
-    public void the_user_librarian_on_the_homepage() throws InterruptedException {
+    public void the_user_librarian_on_the_homepage()  {
 
         Driver.getDriver().get(ConfigurationReader.getProperty("logIn_Url"));
         loginPage.loginAsLibrarian();
-        Thread.sleep(2000);
+        BrowserUtils.sleep(2);
 
     }
 
     @When("the user clicks users module link")
-    public void theUserClicksUsersModuleLink() throws InterruptedException {
+    public void theUserClicksUsersModuleLink()  {
 
         basePage.usersLink.click();
-        Thread.sleep(2000);
+        BrowserUtils.sleep(2);
 
     }
 
     @When("the user click Status dropdown")
-    public void the_user_click_status_dropdown() throws InterruptedException {
+    public void the_user_click_status_dropdown()  {
 
         usersPage.statusDropDownButton.click();
-        Thread.sleep(1000);
+        BrowserUtils.sleep(2);
 
     }
 
