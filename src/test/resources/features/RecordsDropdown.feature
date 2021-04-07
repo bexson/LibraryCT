@@ -1,4 +1,5 @@
 @records
+@regression
 Feature: As a librarian, I should be able to see book records on user page
 
   Background: Librarian is already logged in

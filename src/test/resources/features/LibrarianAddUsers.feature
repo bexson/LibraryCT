@@ -1,6 +1,7 @@
 Feature: As a librarian, I should be able to add users from users page.
 
   @librarianAddUser
+    @smoke
   Scenario Template: Add users with all valid info
     Given Librarian is on user management page
     When Librarian clicks Add User button
